@@ -4,535 +4,425 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 <title>Blueberry Congress Peru 2025 – Directorio</title>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --bg: #0d1117;
-    --surface: #161b22;
-    --card: #1c2333;
-    --card-hover: #212840;
-    --border: #2a3347;
-    --accent: #5b8dee;
-    --accent2: #3dd68c;
-    --accent3: #f5c542;
-    --text: #e6edf3;
-    --muted: #8b96a5;
-    --tag-bg: #1e2d4a;
-    --tag-text: #7eb8f7;
-    --radius: 16px;
-    --radius-sm: 10px;
-  }
+:root {
+  --bg: #080c12;
+  --surface: #0f1520;
+  --card: #131c2b;
+  --card2: #172034;
+  --border: #1e2d44;
+  --border2: #243350;
+  --accent: #4f8ef7;
+  --accent2: #2ecc8a;
+  --accent3: #f5c842;
+  --accent4: #f06a6a;
+  --text: #dde6f0;
+  --muted: #6b7f99;
+  --muted2: #4a5f7a;
+  --tag-bg: #172040;
+  --tag-text: #6aaaf5;
+  --r: 14px;
+  --rs: 9px;
+}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;overflow-x:hidden}
 
-  * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+/* ── NAV TABS ── */
+.nav-tabs{display:flex;background:var(--surface);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:200}
+.nav-tab{flex:1;padding:14px 6px 12px;text-align:center;font-family:'Syne',sans-serif;font-size:12px;font-weight:700;letter-spacing:.5px;color:var(--muted);cursor:pointer;border-bottom:2px solid transparent;transition:all .2s;user-select:none}
+.nav-tab.active{color:var(--accent);border-bottom-color:var(--accent)}
+.nav-tab .tab-icon{font-size:16px;display:block;margin-bottom:3px}
+.badge-count{display:inline-block;background:var(--accent4);color:#fff;font-size:10px;font-weight:700;min-width:16px;height:16px;border-radius:8px;line-height:16px;padding:0 4px;margin-left:4px;vertical-align:middle}
 
-  body {
-    font-family: 'DM Sans', sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    min-height: 100vh;
-    overflow-x: hidden;
-  }
+/* ── HEADER ── */
+.header{background:linear-gradient(160deg,#0a1525 0%,#0d1e35 60%,#091220 100%);padding:24px 18px 20px;text-align:center;position:relative;overflow:hidden}
+.header::before{content:'';position:absolute;top:-80px;left:50%;transform:translateX(-50%);width:500px;height:260px;background:radial-gradient(ellipse,rgba(79,142,247,.14) 0%,transparent 70%);pointer-events:none}
+.header-badge{display:inline-block;background:rgba(79,142,247,.12);border:1px solid rgba(79,142,247,.3);color:var(--accent);font-size:10.5px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:5px 14px;border-radius:100px;margin-bottom:10px}
+.header h1{font-family:'Syne',sans-serif;font-size:24px;font-weight:800;color:#fff;line-height:1.2;letter-spacing:-.5px}
+.header h1 span{color:var(--accent2)}
+.header p{color:var(--muted);font-size:13px;margin-top:6px;font-weight:300}
 
-  /* Header */
-  .header {
-    background: linear-gradient(135deg, #0f1929 0%, #111827 50%, #0e1c30 100%);
-    padding: 28px 20px 24px;
-    text-align: center;
-    border-bottom: 1px solid var(--border);
-    position: relative;
-    overflow: hidden;
-  }
-  .header::before {
-    content: '';
-    position: absolute;
-    top: -60px; left: 50%; transform: translateX(-50%);
-    width: 400px; height: 200px;
-    background: radial-gradient(ellipse, rgba(91,141,238,0.18) 0%, transparent 70%);
-    pointer-events: none;
-  }
-  .header-badge {
-    display: inline-block;
-    background: rgba(91,141,238,0.15);
-    border: 1px solid rgba(91,141,238,0.35);
-    color: var(--accent);
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    padding: 5px 14px;
-    border-radius: 100px;
-    margin-bottom: 12px;
-  }
-  .header h1 {
-    font-family: 'Syne', sans-serif;
-    font-size: 26px;
-    font-weight: 800;
-    color: #fff;
-    line-height: 1.2;
-    letter-spacing: -0.5px;
-  }
-  .header h1 span { color: var(--accent2); }
-  .header p {
-    color: var(--muted);
-    font-size: 13.5px;
-    margin-top: 8px;
-    font-weight: 300;
-  }
+/* ── PAGES ── */
+.page{display:none}
+.page.active{display:block}
 
-  /* Search section */
-  .search-wrap {
-    padding: 20px 16px 12px;
-    background: var(--surface);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    border-bottom: 1px solid var(--border);
-    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
-  }
-  .search-box {
-    position: relative;
-  }
-  .search-icon {
-    position: absolute;
-    left: 16px; top: 50%; transform: translateY(-50%);
-    color: var(--muted);
-    font-size: 18px;
-    pointer-events: none;
-  }
-  #searchInput {
-    width: 100%;
-    padding: 14px 48px 14px 48px;
-    background: var(--card);
-    border: 1.5px solid var(--border);
-    border-radius: var(--radius);
-    color: var(--text);
-    font-size: 16px;
-    font-family: 'DM Sans', sans-serif;
-    outline: none;
-    transition: border-color 0.2s, box-shadow 0.2s;
-    -webkit-appearance: none;
-  }
-  #searchInput:focus {
-    border-color: var(--accent);
-    box-shadow: 0 0 0 3px rgba(91,141,238,0.15);
-  }
-  #searchInput::placeholder { color: var(--muted); }
-  .clear-btn {
-    position: absolute;
-    right: 14px; top: 50%; transform: translateY(-50%);
-    background: var(--border);
-    border: none;
-    color: var(--muted);
-    width: 26px; height: 26px;
-    border-radius: 50%;
-    font-size: 14px;
-    cursor: pointer;
-    display: none;
-    align-items: center; justify-content: center;
-  }
-  .clear-btn.visible { display: flex; }
+/* ── SEARCH ── */
+.search-wrap{padding:14px 14px 10px;background:var(--surface);border-bottom:1px solid var(--border);box-shadow:0 4px 20px rgba(0,0,0,.4)}
+.search-box{position:relative}
+.search-icon{position:absolute;left:14px;top:50%;transform:translateY(-50%);color:var(--muted);font-size:17px;pointer-events:none}
+#searchInput{width:100%;padding:13px 44px 13px 44px;background:var(--card);border:1.5px solid var(--border);border-radius:var(--r);color:var(--text);font-size:16px;font-family:'DM Sans',sans-serif;outline:none;transition:border-color .2s,box-shadow .2s;-webkit-appearance:none}
+#searchInput:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(79,142,247,.12)}
+#searchInput::placeholder{color:var(--muted2)}
+.clear-btn{position:absolute;right:12px;top:50%;transform:translateY(-50%);background:var(--border2);border:none;color:var(--muted);width:26px;height:26px;border-radius:50%;font-size:13px;cursor:pointer;display:none;align-items:center;justify-content:center}
+.clear-btn.visible{display:flex}
+.filters{display:flex;gap:7px;margin-top:10px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding-bottom:2px}
+.filters::-webkit-scrollbar{display:none}
+.chip{flex-shrink:0;padding:6px 13px;background:var(--card);border:1.5px solid var(--border);border-radius:100px;color:var(--muted);font-size:12px;font-weight:500;cursor:pointer;white-space:nowrap;transition:all .15s;user-select:none}
+.chip.active{background:rgba(79,142,247,.15);border-color:var(--accent);color:var(--accent)}
 
-  /* Filter chips */
-  .filters {
-    display: flex;
-    gap: 8px;
-    margin-top: 12px;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    padding-bottom: 2px;
-  }
-  .filters::-webkit-scrollbar { display: none; }
-  .chip {
-    flex-shrink: 0;
-    padding: 6px 14px;
-    background: var(--card);
-    border: 1.5px solid var(--border);
-    border-radius: 100px;
-    color: var(--muted);
-    font-size: 12.5px;
-    font-weight: 500;
-    cursor: pointer;
-    white-space: nowrap;
-    transition: all 0.15s;
-  }
-  .chip.active {
-    background: rgba(91,141,238,0.18);
-    border-color: var(--accent);
-    color: var(--accent);
-  }
+/* ── STATS ── */
+.stats-bar{padding:9px 14px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--border)}
+.stats-bar span{color:var(--muted);font-size:12.5px}
+.stats-bar strong{color:var(--accent2);font-weight:600}
 
-  /* Stats bar */
-  .stats-bar {
-    padding: 10px 16px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: 1px solid var(--border);
-  }
-  .stats-bar span {
-    color: var(--muted);
-    font-size: 13px;
-  }
-  .stats-bar strong { color: var(--accent2); font-weight: 600; }
+/* ── CARDS ── */
+.cards-container{padding:10px 10px 80px;display:flex;flex-direction:column;gap:9px}
+.section-divider{margin:6px 4px 2px;display:flex;align-items:center;gap:10px}
+.section-divider span{color:var(--muted2);font-size:10.5px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;white-space:nowrap}
+.divider-line{flex:1;height:1px;background:var(--border)}
 
-  /* Cards */
-  .cards-container {
-    padding: 12px 12px 24px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
+.card{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:15px;transition:transform .15s,border-color .15s;position:relative;overflow:hidden;animation:fadeUp .22s ease both}
+.card::after{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--accent),var(--accent2));opacity:0;transition:opacity .2s}
+.card.has-commitment{border-color:rgba(245,200,66,.3)}
+.card.has-commitment::after{opacity:1;background:linear-gradient(90deg,var(--accent3),#f09a1a)}
+.card.new-entry{border-color:rgba(46,204,138,.35)}
+.card.new-entry::after{opacity:1;background:linear-gradient(90deg,var(--accent2),var(--accent))}
+.card:active{transform:scale(0.986)}
+@keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
 
-  .card {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 16px;
-    transition: transform 0.15s, box-shadow 0.15s, border-color 0.15s;
-    position: relative;
-    overflow: hidden;
-    animation: fadeUp 0.25s ease both;
-  }
-  .card::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0; height: 2px;
-    background: linear-gradient(90deg, var(--accent), var(--accent2));
-    opacity: 0;
-    transition: opacity 0.2s;
-  }
-  .card:active { transform: scale(0.985); }
-  .card.new-entry { border-color: rgba(61,214,140,0.4); }
-  .card.new-entry::before { opacity: 1; background: linear-gradient(90deg, var(--accent2), #5b8dee); }
+.card-header{display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:7px}
+.card-name{font-family:'Syne',sans-serif;font-size:16px;font-weight:700;color:#fff;line-height:1.25;flex:1}
+.card-badges{display:flex;gap:5px;flex-shrink:0;flex-wrap:wrap;justify-content:flex-end}
+.badge{font-size:10px;font-weight:700;letter-spacing:.8px;padding:3px 8px;border-radius:100px;text-transform:uppercase}
+.badge-new{background:rgba(46,204,138,.15);border:1px solid rgba(46,204,138,.35);color:var(--accent2)}
+.badge-commit{background:rgba(245,200,66,.12);border:1px solid rgba(245,200,66,.3);color:var(--accent3)}
+.category-tag{display:inline-block;background:var(--tag-bg);color:var(--tag-text);font-size:11.5px;font-weight:500;padding:3px 10px;border-radius:6px;margin-bottom:9px}
+.card-desc{color:var(--muted);font-size:13px;line-height:1.6;margin-bottom:10px}
+.card-meta{display:flex;flex-direction:column;gap:5px}
+.meta-row{display:flex;align-items:flex-start;gap:7px;color:var(--muted)}
+.meta-icon{font-size:13px;flex-shrink:0;margin-top:1px}
+.meta-val{color:var(--text);font-size:12.5px;line-height:1.4;word-break:break-word}
+.notes-box{background:rgba(245,200,66,.07);border:1px solid rgba(245,200,66,.18);border-radius:var(--rs);padding:9px 11px;margin-top:9px;display:flex;gap:7px;align-items:flex-start}
+.notes-text{color:#c9a832;font-size:12px;line-height:1.55}
+.card-footer{margin-top:12px;display:flex;gap:7px;flex-wrap:wrap;align-items:center}
+.btn-web{display:inline-flex;align-items:center;gap:5px;background:rgba(79,142,247,.12);border:1.5px solid rgba(79,142,247,.3);color:var(--accent);font-size:12.5px;font-weight:600;padding:7px 14px;border-radius:var(--rs);text-decoration:none;font-family:'DM Sans',sans-serif;transition:background .15s}
+.btn-web:active{background:rgba(79,142,247,.22)}
+.btn-commit{display:inline-flex;align-items:center;gap:5px;background:rgba(245,200,66,.1);border:1.5px solid rgba(245,200,66,.28);color:var(--accent3);font-size:12.5px;font-weight:600;padding:7px 14px;border-radius:var(--rs);cursor:pointer;font-family:'DM Sans',sans-serif;transition:background .15s}
+.btn-commit:active{background:rgba(245,200,66,.2)}
+.btn-commit.has-c{background:rgba(245,200,66,.18);border-color:var(--accent3)}
 
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(12px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
+/* Commitment mini list on card */
+.commit-list{margin-top:10px;display:flex;flex-direction:column;gap:6px}
+.commit-item-mini{background:var(--card2);border:1px solid var(--border2);border-radius:var(--rs);padding:8px 11px;display:flex;gap:8px;align-items:flex-start}
+.commit-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;margin-top:4px}
+.dot-pending{background:var(--accent3)}
+.dot-done{background:var(--accent2)}
+.dot-cancelled{background:var(--muted2)}
+.commit-mini-text{flex:1;min-width:0}
+.commit-mini-type{font-size:11.5px;font-weight:600;color:var(--text)}
+.commit-mini-note{font-size:11px;color:var(--muted);margin-top:1px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.commit-mini-date{font-size:10.5px;color:var(--accent3);margin-top:2px}
+.commit-mini-actions{display:flex;gap:4px;flex-shrink:0}
+.cm-btn{background:none;border:none;font-size:14px;cursor:pointer;padding:2px;line-height:1}
 
-  .card-header {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: 10px;
-    margin-bottom: 8px;
-  }
-  .card-name {
-    font-family: 'Syne', sans-serif;
-    font-size: 17px;
-    font-weight: 700;
-    color: #fff;
-    line-height: 1.25;
-    flex: 1;
-  }
-  .new-badge {
-    flex-shrink: 0;
-    background: rgba(61,214,140,0.18);
-    border: 1px solid rgba(61,214,140,0.4);
-    color: var(--accent2);
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    padding: 3px 9px;
-    border-radius: 100px;
-    text-transform: uppercase;
-  }
+/* ── MODAL ── */
+.modal-overlay{position:fixed;inset:0;background:rgba(5,10,18,.85);z-index:500;display:none;align-items:flex-end;justify-content:center;backdrop-filter:blur(4px)}
+.modal-overlay.open{display:flex}
+.modal{background:var(--surface);border:1px solid var(--border2);border-radius:20px 20px 0 0;width:100%;max-height:92vh;overflow-y:auto;padding:20px 18px 40px;animation:slideUp .28s cubic-bezier(.34,1.2,.64,1)}
+@keyframes slideUp{from{transform:translateY(100%)}to{transform:translateY(0)}}
+.modal-handle{width:36px;height:4px;background:var(--border2);border-radius:2px;margin:0 auto 18px}
+.modal-title{font-family:'Syne',sans-serif;font-size:18px;font-weight:700;color:#fff;margin-bottom:4px}
+.modal-sub{color:var(--muted);font-size:13px;margin-bottom:20px}
+.modal-close{position:absolute;top:18px;right:18px;background:var(--card2);border:1px solid var(--border2);color:var(--muted);width:30px;height:30px;border-radius:50%;font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center}
 
-  .category-tag {
-    display: inline-block;
-    background: var(--tag-bg);
-    color: var(--tag-text);
-    font-size: 12px;
-    font-weight: 500;
-    padding: 4px 10px;
-    border-radius: 6px;
-    margin-bottom: 10px;
-  }
+/* ── FORM ── */
+.form-group{margin-bottom:13px}
+.form-group label{display:block;font-size:11px;font-weight:700;color:var(--muted);letter-spacing:.9px;text-transform:uppercase;margin-bottom:5px}
+.form-group input,.form-group textarea,.form-group select{width:100%;background:var(--card);border:1.5px solid var(--border);border-radius:var(--rs);color:var(--text);font-size:15px;font-family:'DM Sans',sans-serif;padding:11px 13px;outline:none;transition:border-color .2s;-webkit-appearance:none}
+.form-group textarea{min-height:75px;resize:vertical}
+.form-group select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M0 0l6 8 6-8z' fill='%236b7f99'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 13px center;padding-right:34px}
+.form-group input:focus,.form-group textarea:focus,.form-group select:focus{border-color:var(--accent2);box-shadow:0 0 0 3px rgba(46,204,138,.1)}
+.form-group input::placeholder,.form-group textarea::placeholder{color:var(--muted2)}
 
-  .card-desc {
-    color: var(--muted);
-    font-size: 13.5px;
-    line-height: 1.6;
-    margin-bottom: 12px;
-  }
+/* Commitment types grid */
+.commit-types{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-bottom:4px}
+.type-option{background:var(--card);border:1.5px solid var(--border);border-radius:var(--rs);padding:10px 12px;cursor:pointer;transition:all .15s;text-align:left}
+.type-option.selected{background:rgba(79,142,247,.12);border-color:var(--accent)}
+.type-option .type-icon{font-size:18px;display:block;margin-bottom:4px}
+.type-option .type-label{font-size:12px;font-weight:600;color:var(--text);line-height:1.3}
 
-  .card-meta {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    font-size: 13px;
-  }
-  .meta-row {
-    display: flex;
-    align-items: flex-start;
-    gap: 8px;
-    color: var(--muted);
-  }
-  .meta-icon { font-size: 14px; flex-shrink: 0; margin-top: 1px; }
-  .meta-val { color: var(--text); font-size: 13px; line-height: 1.4; word-break: break-word; }
+/* Priority selector */
+.priority-row{display:flex;gap:7px}
+.prio-btn{flex:1;padding:9px 6px;background:var(--card);border:1.5px solid var(--border);border-radius:var(--rs);font-size:12px;font-weight:600;cursor:pointer;text-align:center;transition:all .15s;font-family:'DM Sans',sans-serif;color:var(--muted)}
+.prio-btn.sel-alta{background:rgba(240,106,106,.15);border-color:var(--accent4);color:var(--accent4)}
+.prio-btn.sel-media{background:rgba(245,200,66,.12);border-color:var(--accent3);color:var(--accent3)}
+.prio-btn.sel-baja{background:rgba(46,204,138,.1);border-color:var(--accent2);color:var(--accent2)}
 
-  .card-footer {
-    margin-top: 14px;
-    display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
-  }
-  .btn-web {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    background: rgba(91,141,238,0.15);
-    border: 1.5px solid rgba(91,141,238,0.4);
-    color: var(--accent);
-    font-size: 13px;
-    font-weight: 600;
-    padding: 8px 16px;
-    border-radius: var(--radius-sm);
-    text-decoration: none;
-    transition: background 0.15s, border-color 0.15s;
-    font-family: 'DM Sans', sans-serif;
-  }
-  .btn-web:active { background: rgba(91,141,238,0.25); }
+/* Form actions */
+.form-actions{display:flex;gap:9px;margin-top:18px}
+.btn-save{flex:1;background:var(--accent2);color:#071a10;border:none;border-radius:var(--rs);font-family:'Syne',sans-serif;font-size:15px;font-weight:700;padding:13px;cursor:pointer;transition:opacity .15s,transform .1s;display:flex;align-items:center;justify-content:center;gap:5px}
+.btn-save:active{transform:scale(.97);opacity:.9}
+.btn-secondary{background:var(--card);border:1.5px solid var(--border);color:var(--muted);border-radius:var(--rs);font-family:'DM Sans',sans-serif;font-size:13.5px;font-weight:500;padding:13px 16px;cursor:pointer;transition:border-color .15s,color .15s}
+.btn-secondary:active{border-color:var(--text);color:var(--text)}
 
-  .notes-box {
-    background: rgba(245,197,66,0.08);
-    border: 1px solid rgba(245,197,66,0.2);
-    border-radius: var(--radius-sm);
-    padding: 10px 12px;
-    margin-top: 10px;
-    display: flex;
-    gap: 8px;
-    align-items: flex-start;
-  }
-  .notes-icon { font-size: 13px; flex-shrink: 0; margin-top: 1px; }
-  .notes-text {
-    color: #d4aa45;
-    font-size: 12.5px;
-    line-height: 1.55;
-  }
+/* ── ADD SECTION ── */
+.add-section{background:var(--surface);border-top:1.5px solid var(--border);padding:22px 14px 60px}
+.section-title{font-family:'Syne',sans-serif;font-size:18px;font-weight:700;color:#fff;margin-bottom:4px;display:flex;align-items:center;gap:9px}
+.section-title .s-icon{width:30px;height:30px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:15px}
+.icon-green{background:rgba(46,204,138,.12);border:1px solid rgba(46,204,138,.28)}
+.icon-blue{background:rgba(79,142,247,.12);border:1px solid rgba(79,142,247,.28)}
+.section-sub{color:var(--muted);font-size:12.5px;margin-bottom:18px}
 
-  /* Empty state */
-  .empty {
-    text-align: center;
-    padding: 60px 20px;
-  }
-  .empty-icon { font-size: 48px; margin-bottom: 16px; }
-  .empty h3 { font-family: 'Syne', sans-serif; font-size: 18px; color: var(--text); margin-bottom: 8px; }
-  .empty p { color: var(--muted); font-size: 14px; }
+/* Custom category inline */
+.cat-row{display:flex;gap:7px;align-items:flex-end}
+.cat-row .form-group{flex:1;margin-bottom:0}
+.btn-add-cat{background:rgba(79,142,247,.12);border:1.5px solid rgba(79,142,247,.28);color:var(--accent);border-radius:var(--rs);font-size:13px;font-weight:600;padding:11px 14px;cursor:pointer;white-space:nowrap;font-family:'DM Sans',sans-serif;transition:background .15s}
+.btn-add-cat:active{background:rgba(79,142,247,.22)}
+.custom-cats{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.custom-cat-chip{display:flex;align-items:center;gap:5px;background:rgba(79,142,247,.1);border:1px solid rgba(79,142,247,.25);border-radius:100px;padding:4px 10px 4px 12px;font-size:12px;color:var(--accent)}
+.custom-cat-chip button{background:none;border:none;color:var(--muted);cursor:pointer;font-size:13px;line-height:1;padding:0}
 
-  /* Divider */
-  .section-divider {
-    margin: 8px 12px 4px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  .section-divider span {
-    color: var(--muted);
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    white-space: nowrap;
-  }
-  .divider-line { flex: 1; height: 1px; background: var(--border); }
+/* ── PENDIENTES PAGE ── */
+.pending-header{padding:18px 14px 12px;background:var(--surface);border-bottom:1px solid var(--border)}
+.pending-header h2{font-family:'Syne',sans-serif;font-size:20px;font-weight:700;color:#fff;margin-bottom:2px}
+.pending-header p{color:var(--muted);font-size:13px}
+.pending-stats{display:flex;gap:10px;margin-top:14px}
+.pstat{flex:1;background:var(--card);border:1px solid var(--border);border-radius:var(--rs);padding:12px 10px;text-align:center}
+.pstat-num{font-family:'Syne',sans-serif;font-size:22px;font-weight:800;display:block}
+.pstat-label{font-size:11px;color:var(--muted);margin-top:2px;display:block}
+.num-pending{color:var(--accent3)}
+.num-done{color:var(--accent2)}
+.num-total{color:var(--accent)}
 
-  /* Add company form */
-  .add-section {
-    background: var(--surface);
-    border-top: 2px solid var(--border);
-    padding: 24px 16px 40px;
-  }
-  .add-section h2 {
-    font-family: 'Syne', sans-serif;
-    font-size: 20px;
-    font-weight: 700;
-    color: #fff;
-    margin-bottom: 4px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  .add-section h2 .add-icon {
-    width: 32px; height: 32px;
-    background: rgba(61,214,140,0.15);
-    border: 1.5px solid rgba(61,214,140,0.35);
-    border-radius: 8px;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 16px;
-  }
-  .add-section p {
-    color: var(--muted);
-    font-size: 13px;
-    margin-bottom: 20px;
-  }
+.pending-list{padding:12px 10px 80px;display:flex;flex-direction:column;gap:8px}
+.pending-empty{text-align:center;padding:60px 20px}
+.pending-empty .ei{font-size:44px;margin-bottom:14px}
+.pending-empty h3{font-family:'Syne',sans-serif;font-size:17px;color:var(--text);margin-bottom:6px}
+.pending-empty p{color:var(--muted);font-size:13px}
 
-  .form-group {
-    margin-bottom: 14px;
-  }
-  .form-group label {
-    display: block;
-    font-size: 12px;
-    font-weight: 600;
-    color: var(--muted);
-    letter-spacing: 0.8px;
-    text-transform: uppercase;
-    margin-bottom: 6px;
-  }
-  .form-group input,
-  .form-group textarea,
-  .form-group select {
-    width: 100%;
-    background: var(--card);
-    border: 1.5px solid var(--border);
-    border-radius: var(--radius-sm);
-    color: var(--text);
-    font-size: 15px;
-    font-family: 'DM Sans', sans-serif;
-    padding: 12px 14px;
-    outline: none;
-    transition: border-color 0.2s;
-    -webkit-appearance: none;
-  }
-  .form-group textarea {
-    min-height: 80px;
-    resize: vertical;
-  }
-  .form-group select {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M0 0l6 8 6-8z' fill='%238b96a5'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: right 14px center;
-    padding-right: 36px;
-  }
-  .form-group input:focus,
-  .form-group textarea:focus,
-  .form-group select:focus {
-    border-color: var(--accent2);
-    box-shadow: 0 0 0 3px rgba(61,214,140,0.12);
-  }
-  .form-group input::placeholder,
-  .form-group textarea::placeholder { color: #4a5568; }
+.pcard{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:14px;animation:fadeUp .2s ease both}
+.pcard-top{display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:8px}
+.pcard-empresa{font-family:'Syne',sans-serif;font-size:14px;font-weight:700;color:#fff}
+.pcard-cat{font-size:11px;color:var(--muted);margin-top:1px}
+.pcard-prio{font-size:11px;font-weight:700;padding:3px 9px;border-radius:100px;flex-shrink:0}
+.prio-alta{background:rgba(240,106,106,.15);color:var(--accent4);border:1px solid rgba(240,106,106,.3)}
+.prio-media{background:rgba(245,200,66,.12);color:var(--accent3);border:1px solid rgba(245,200,66,.25)}
+.prio-baja{background:rgba(46,204,138,.1);color:var(--accent2);border:1px solid rgba(46,204,138,.22)}
+.pcard-type{display:flex;align-items:center;gap:6px;margin-bottom:6px}
+.pcard-type-icon{font-size:15px}
+.pcard-type-label{font-size:13px;font-weight:600;color:var(--text)}
+.pcard-meta{display:flex;flex-direction:column;gap:4px;margin-bottom:10px}
+.pmeta-row{display:flex;align-items:flex-start;gap:6px;font-size:12px;color:var(--muted)}
+.pmeta-val{color:var(--text);font-size:12px}
+.pcard-actions{display:flex;gap:7px}
+.pact-btn{flex:1;padding:9px;border-radius:var(--rs);font-size:12px;font-weight:600;cursor:pointer;border:1.5px solid;font-family:'DM Sans',sans-serif;transition:all .15s;text-align:center}
+.pact-done{background:rgba(46,204,138,.1);border-color:rgba(46,204,138,.3);color:var(--accent2)}
+.pact-done:active{background:rgba(46,204,138,.22)}
+.pact-delete{background:rgba(240,106,106,.08);border-color:rgba(240,106,106,.22);color:var(--accent4)}
+.pact-delete:active{background:rgba(240,106,106,.18)}
+.pact-undo{background:rgba(245,200,66,.1);border-color:rgba(245,200,66,.25);color:var(--accent3)}
 
-  .form-actions {
-    display: flex;
-    gap: 10px;
-    margin-top: 20px;
-  }
-  .btn-save {
-    flex: 1;
-    background: var(--accent2);
-    color: #0d1f17;
-    border: none;
-    border-radius: var(--radius-sm);
-    font-family: 'Syne', sans-serif;
-    font-size: 15px;
-    font-weight: 700;
-    padding: 14px;
-    cursor: pointer;
-    transition: opacity 0.15s, transform 0.1s;
-    display: flex; align-items: center; justify-content: center; gap: 6px;
-  }
-  .btn-save:active { transform: scale(0.97); opacity: 0.9; }
-  .btn-clear {
-    background: var(--card);
-    border: 1.5px solid var(--border);
-    color: var(--muted);
-    border-radius: var(--radius-sm);
-    font-family: 'DM Sans', sans-serif;
-    font-size: 14px;
-    font-weight: 500;
-    padding: 14px 18px;
-    cursor: pointer;
-    transition: border-color 0.15s, color 0.15s;
-  }
-  .btn-clear:active { border-color: var(--text); color: var(--text); }
+.status-done .pcard{opacity:.7;border-color:rgba(46,204,138,.2)}
+.pcard-status-done{display:flex;align-items:center;gap:5px;font-size:11.5px;color:var(--accent2);margin-bottom:8px}
 
-  /* Toast */
-  .toast {
-    position: fixed;
-    bottom: 20px; left: 50%; transform: translateX(-50%) translateY(100px);
-    background: var(--accent2);
-    color: #0d1f17;
-    font-weight: 600;
-    font-size: 14px;
-    padding: 12px 24px;
-    border-radius: 100px;
-    z-index: 9999;
-    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-    white-space: nowrap;
-    box-shadow: 0 8px 32px rgba(61,214,140,0.4);
-  }
-  .toast.show { transform: translateX(-50%) translateY(0); }
+/* Filter bar pending */
+.pending-filter{display:flex;gap:7px;padding:10px 10px 0;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.pending-filter::-webkit-scrollbar{display:none}
 
-  /* Scrollbar */
-  ::-webkit-scrollbar { width: 6px; height: 6px; }
-  ::-webkit-scrollbar-track { background: var(--bg); }
-  ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+/* Empty state */
+.empty{text-align:center;padding:50px 20px}
+.empty-icon{font-size:44px;margin-bottom:14px}
+.empty h3{font-family:'Syne',sans-serif;font-size:17px;color:var(--text);margin-bottom:6px}
+.empty p{color:var(--muted);font-size:13px}
+
+/* Toast */
+.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(120px);background:var(--accent2);color:#071a10;font-weight:700;font-size:13.5px;padding:11px 22px;border-radius:100px;z-index:9999;transition:transform .3s cubic-bezier(.34,1.4,.64,1);white-space:nowrap;box-shadow:0 8px 32px rgba(46,204,138,.35)}
+.toast.show{transform:translateX(-50%) translateY(0)}
+.toast.err{background:var(--accent4);box-shadow:0 8px 32px rgba(240,106,106,.35)}
+
+::-webkit-scrollbar{width:5px;height:5px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px}
 </style>
 </head>
 <body>
 
+<!-- HEADER -->
 <div class="header">
-  <div class="header-badge">Evento · Networking 2025</div>
+  <div class="header-badge">Networking · Peru 2025</div>
   <h1>Blueberry Congress<br><span>Peru 2025</span></h1>
   <p>Directorio de auspiciadores y expositores</p>
 </div>
 
-<div class="search-wrap">
-  <div class="search-box">
-    <span class="search-icon">🔍</span>
-    <input type="text" id="searchInput" placeholder="Buscar empresa, categoría, país…" autocomplete="off" autocorrect="off" spellcheck="false">
-    <button class="clear-btn" id="clearBtn" onclick="clearSearch()">✕</button>
+<!-- NAV -->
+<div class="nav-tabs">
+  <div class="nav-tab active" onclick="switchTab('directorio')" id="tab-directorio">
+    <span class="tab-icon">🏢</span>DIRECTORIO
   </div>
-  <div class="filters" id="filterChips"></div>
+  <div class="nav-tab" onclick="switchTab('pendientes')" id="tab-pendientes">
+    <span class="tab-icon">✅</span>PENDIENTES<span class="badge-count" id="pendCount" style="display:none">0</span>
+  </div>
+  <div class="nav-tab" onclick="switchTab('agregar')" id="tab-agregar">
+    <span class="tab-icon">➕</span>AGREGAR
+  </div>
 </div>
 
-<div class="stats-bar">
-  <span>Mostrando <strong id="countDisplay">0</strong> empresas</span>
-  <span id="filterLabel" style="font-size:12px;"></span>
+<!-- ══════════════════════════════════════════ -->
+<!-- PAGE: DIRECTORIO -->
+<!-- ══════════════════════════════════════════ -->
+<div class="page active" id="page-directorio">
+  <div class="search-wrap">
+    <div class="search-box">
+      <span class="search-icon">🔍</span>
+      <input type="text" id="searchInput" placeholder="Buscar empresa, categoría, país…" autocomplete="off" spellcheck="false">
+      <button class="clear-btn" id="clearBtn" onclick="clearSearch()">✕</button>
+    </div>
+    <div class="filters" id="filterChips"></div>
+  </div>
+  <div class="stats-bar">
+    <span>Mostrando <strong id="countDisplay">0</strong> empresas</span>
+    <span id="filterLabel" style="font-size:11.5px;color:var(--muted)"></span>
+  </div>
+  <div class="cards-container" id="cardsContainer"></div>
 </div>
 
-<div class="cards-container" id="cardsContainer"></div>
+<!-- ══════════════════════════════════════════ -->
+<!-- PAGE: PENDIENTES -->
+<!-- ══════════════════════════════════════════ -->
+<div class="page" id="page-pendientes">
+  <div class="pending-header">
+    <h2>📋 Mis Pendientes</h2>
+    <p>Compromisos registrados durante el evento</p>
+    <div class="pending-stats">
+      <div class="pstat"><span class="pstat-num num-pending" id="statPend">0</span><span class="pstat-label">Pendientes</span></div>
+      <div class="pstat"><span class="pstat-num num-done" id="statDone">0</span><span class="pstat-label">Completados</span></div>
+      <div class="pstat"><span class="pstat-num num-total" id="statTotal">0</span><span class="pstat-label">Total</span></div>
+    </div>
+  </div>
+  <div class="pending-filter" id="pendingFilterChips"></div>
+  <div class="pending-list" id="pendingList"></div>
+</div>
 
-<div class="add-section">
-  <h2><span class="add-icon">➕</span> Agregar nueva empresa</h2>
-  <p>La empresa se guardará localmente y aparecerá en el buscador.</p>
+<!-- ══════════════════════════════════════════ -->
+<!-- PAGE: AGREGAR -->
+<!-- ══════════════════════════════════════════ -->
+<div class="page" id="page-agregar">
+  <div class="add-section">
 
-  <div class="form-group">
-    <label>Empresa *</label>
-    <input type="text" id="f_empresa" placeholder="Nombre de la empresa">
-  </div>
-  <div class="form-group">
-    <label>Categoría</label>
-    <select id="f_categoria">
-      <option value="">Seleccionar categoría…</option>
-    </select>
-  </div>
-  <div class="form-group">
-    <label>Descripción</label>
-    <textarea id="f_descripcion" placeholder="Breve descripción de la empresa"></textarea>
-  </div>
-  <div class="form-group">
-    <label>Web / Contacto</label>
-    <input type="text" id="f_web" placeholder="www.ejemplo.com">
-  </div>
-  <div class="form-group">
-    <label>Email / Teléfono</label>
-    <input type="text" id="f_contacto" placeholder="email@empresa.com o +51 999 000 000">
-  </div>
-  <div class="form-group">
-    <label>País / Sede</label>
-    <input type="text" id="f_pais" placeholder="Perú, España, EE.UU…">
-  </div>
-  <div class="form-group">
-    <label>Notas de contacto</label>
-    <textarea id="f_notas" placeholder="Información adicional, representantes, stand…"></textarea>
-  </div>
+    <!-- New Category -->
+    <div class="section-title" style="margin-bottom:4px">
+      <span class="s-icon icon-blue">🏷️</span> Nueva Categoría
+    </div>
+    <p class="section-sub">Crea categorías personalizadas para el directorio.</p>
+    <div class="cat-row">
+      <div class="form-group">
+        <input type="text" id="newCatInput" placeholder="Ej: 🤝 Alianzas Estratégicas">
+      </div>
+      <button class="btn-add-cat" onclick="addCustomCategory()">+ Agregar</button>
+    </div>
+    <div class="custom-cats" id="customCatsList"></div>
 
-  <div class="form-actions">
-    <button class="btn-save" onclick="saveCompany()">💾 Guardar empresa</button>
-    <button class="btn-clear" onclick="clearForm()">🗑 Limpiar</button>
+    <div style="height:1px;background:var(--border);margin:22px 0"></div>
+
+    <!-- New Company -->
+    <div class="section-title" style="margin-bottom:4px">
+      <span class="s-icon icon-green">🏢</span> Nueva Empresa
+    </div>
+    <p class="section-sub">Se guardará localmente y aparecerá en el buscador.</p>
+
+    <div class="form-group">
+      <label>Empresa *</label>
+      <input type="text" id="f_empresa" placeholder="Nombre de la empresa">
+    </div>
+    <div class="form-group">
+      <label>Categoría</label>
+      <select id="f_categoria"></select>
+    </div>
+    <div class="form-group">
+      <label>Descripción</label>
+      <textarea id="f_descripcion" placeholder="Breve descripción"></textarea>
+    </div>
+    <div class="form-group">
+      <label>Web / Contacto</label>
+      <input type="text" id="f_web" placeholder="www.ejemplo.com">
+    </div>
+    <div class="form-group">
+      <label>Email / Teléfono</label>
+      <input type="text" id="f_contacto" placeholder="email@empresa.com o +51 999 000 000">
+    </div>
+    <div class="form-group">
+      <label>País / Sede</label>
+      <input type="text" id="f_pais" placeholder="Perú, España, EE.UU…">
+    </div>
+    <div class="form-group">
+      <label>Notas de contacto</label>
+      <textarea id="f_notas" placeholder="Representantes, stand, info adicional…"></textarea>
+    </div>
+    <div class="form-actions">
+      <button class="btn-save" onclick="saveCompany()">💾 Guardar empresa</button>
+      <button class="btn-secondary" onclick="clearForm()">🗑 Limpiar</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- MODAL: COMPROMISO -->
+<!-- ══════════════════════════════════════════ -->
+<div class="modal-overlay" id="commitModal" onclick="closeModalOutside(event)">
+  <div class="modal" style="position:relative">
+    <div class="modal-handle"></div>
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <div class="modal-title" id="modalTitle">Registrar compromiso</div>
+    <div class="modal-sub" id="modalSub">Empresa</div>
+
+    <div class="form-group">
+      <label>Tipo de compromiso *</label>
+      <div class="commit-types" id="commitTypes">
+        <div class="type-option" onclick="selectType(this,'📧 Enviar email de seguimiento')">
+          <span class="type-icon">📧</span><span class="type-label">Enviar email de seguimiento</span>
+        </div>
+        <div class="type-option" onclick="selectType(this,'📄 Enviar propuesta comercial')">
+          <span class="type-icon">📄</span><span class="type-label">Enviar propuesta comercial</span>
+        </div>
+        <div class="type-option" onclick="selectType(this,'📅 Agendar reunión')">
+          <span class="type-icon">📅</span><span class="type-label">Agendar reunión</span>
+        </div>
+        <div class="type-option" onclick="selectType(this,'💰 Enviar cotización')">
+          <span class="type-icon">💰</span><span class="type-label">Enviar cotización</span>
+        </div>
+        <div class="type-option" onclick="selectType(this,'📦 Enviar muestras / catálogo')">
+          <span class="type-icon">📦</span><span class="type-label">Enviar muestras / catálogo</span>
+        </div>
+        <div class="type-option" onclick="selectType(this,'🤝 Confirmar acuerdo / MOU')">
+          <span class="type-icon">🤝</span><span class="type-label">Confirmar acuerdo / MOU</span>
+        </div>
+        <div class="type-option" onclick="selectType(this,'📞 Llamar / videoconferencia')">
+          <span class="type-icon">📞</span><span class="type-label">Llamar / videoconferencia</span>
+        </div>
+        <div class="type-option" onclick="selectType(this,'🔗 Conectar en LinkedIn')">
+          <span class="type-icon">🔗</span><span class="type-label">Conectar en LinkedIn</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Prioridad</label>
+      <div class="priority-row">
+        <button class="prio-btn" onclick="selectPrio(this,'Alta')" id="prioAlta">🔴 Alta</button>
+        <button class="prio-btn" onclick="selectPrio(this,'Media')" id="prioMedia">🟡 Media</button>
+        <button class="prio-btn" onclick="selectPrio(this,'Baja')" id="prioBaja">🟢 Baja</button>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Contacto específico</label>
+      <input type="text" id="c_contacto" placeholder="Nombre, cargo, email del interlocutor">
+    </div>
+    <div class="form-group">
+      <label>Fecha límite</label>
+      <input type="date" id="c_fecha">
+    </div>
+    <div class="form-group">
+      <label>Notas de lo conversado</label>
+      <textarea id="c_notas" placeholder="Qué se acordó, temas tratados, próximos pasos…"></textarea>
+    </div>
+
+    <div class="form-actions">
+      <button class="btn-save" onclick="saveCommitment()">✅ Guardar compromiso</button>
+      <button class="btn-secondary" onclick="closeModal()">Cancelar</button>
+    </div>
   </div>
 </div>
 
@@ -540,27 +430,27 @@
 
 <script>
 // ─────────────────────────────────────────────
-// DATA FROM CSV
+// BASE DATA
 // ─────────────────────────────────────────────
 const BASE_DATA = [
   {n:1,empresa:"Fall Creek Farm & Nursery",categoria:"🌱 Genética y Material Vegetal",descripcion:"Vivero líder mundial en genética y plantas de arándano. Más de 40 variedades para todas las condiciones climáticas. Presencia directa en Perú.",web:"fallcreeknursery.com",contacto:"blueberries@fallcreeknursery.com\n+1 (541) 937-2973 / 1-800-538-3001",pais:"EE.UU. / Perú",notas:"Oficina en Lima. Solicitar contacto de representante LATAM por web."},
-  {n:2,empresa:"Planasa",categoria:"🌱 Genética y Material Vegetal",descripcion:"Líder global en desarrollo de variedades de berries (arándano, frambuesa, fresa, mora) y material vegetal. 4,000 empleados, 25 países. Fuerte presencia en Perú.",web:"planasa.com",contacto:"contacto vía planasa.com/contact/\nÁlvaro Espinoza – Gerente Comercial Perú",pais:"España / Perú",notas:"Buscar en LinkedIn: 'Alvaro Espinoza Planasa Peru'. Sede Perú: Av. Santo Toribio 173."},
+  {n:2,empresa:"Planasa",categoria:"🌱 Genética y Material Vegetal",descripcion:"Líder global en desarrollo de variedades de berries y material vegetal. 4,000 empleados, 25 países. Fuerte presencia en Perú.",web:"planasa.com",contacto:"contacto vía planasa.com/contact/\nÁlvaro Espinoza – Gerente Comercial Perú",pais:"España / Perú",notas:"Buscar en LinkedIn: 'Alvaro Espinoza Planasa Peru'. Sede Perú: Av. Santo Toribio 173."},
   {n:3,empresa:"Agromillora",categoria:"🌱 Genética y Material Vegetal",descripcion:"Producción y exportación global de plantas y genética vegetal para fruticultura intensiva.",web:"agromillora.com",contacto:"info@agromillora.com",pais:"España / Global",notas:"Contactar vía web para representante LATAM."},
   {n:4,empresa:"Blue by Tasty Berries",categoria:"🌱 Genética y Material Vegetal",descripcion:"Genética y producción de variedades de arándanos especializadas.",web:"",contacto:"Consultar directamente en el stand del evento",pais:"—",notas:"Auspiciador presente en el evento."},
   {n:5,empresa:"Caliplant Group",categoria:"🌱 Genética y Material Vegetal",descripcion:"Producción y exportación de plantas de berries, incluyendo arándanos.",web:"",contacto:"Consultar directamente en el stand del evento",pais:"—",notas:"Auspiciador presente en el evento."},
   {n:6,empresa:"Maceflor Berries",categoria:"🌱 Genética y Material Vegetal",descripcion:"Producción y comercialización de berries; material vegetal certificado.",web:"",contacto:"Consultar directamente en el stand del evento",pais:"—",notas:"Auspiciador presente en el evento."},
   {n:7,empresa:"Cocogreen",categoria:"🌿 Sustratos y Medios de Cultivo",descripcion:"Producción de sustratos de fibra de coco premium para agricultura intensiva.",web:"cocogreen.com",contacto:"info@cocogreen.com",pais:"Internacional",notas:""},
-  {n:8,empresa:"Pelemix",categoria:"🌿 Sustratos y Medios de Cultivo",descripcion:"Fabricación global de sustratos de coco para horticultura y berries. Referente internacional.",web:"pelemix.com",contacto:"info@pelemix.com",pais:"Israel / Global",notas:""},
+  {n:8,empresa:"Pelemix",categoria:"🌿 Sustratos y Medios de Cultivo",descripcion:"Fabricación global de sustratos de coco para horticultura y berries.",web:"pelemix.com",contacto:"info@pelemix.com",pais:"Israel / Global",notas:""},
   {n:9,empresa:"Projar",categoria:"🌿 Sustratos y Medios de Cultivo",descripcion:"Sustratos y soluciones para cultivo intensivo y protegido.",web:"projar.es",contacto:"projar@projar.es",pais:"España",notas:""},
   {n:10,empresa:"Fibre Dust LLC",categoria:"🌿 Sustratos y Medios de Cultivo",descripcion:"Producción de sustratos de coco de alta calidad para uso hortícola.",web:"fibredust.com",contacto:"info@fibredust.com",pais:"EE.UU.",notas:""},
   {n:11,empresa:"Kokos Flora",categoria:"🌿 Sustratos y Medios de Cultivo",descripcion:"Sustratos premium de fibra de coco para producción intensiva.",web:"",contacto:"Consultar en el stand del evento",pais:"—",notas:""},
   {n:12,empresa:"Nature Hydro",categoria:"🌿 Sustratos y Medios de Cultivo",descripcion:"Soluciones para hidroponía, cultivo sin suelo y sistemas de sustrato.",web:"",contacto:"Consultar en el stand del evento",pais:"—",notas:""},
-  {n:13,empresa:"Netafim",categoria:"💧 Riego y Gestión Hídrica",descripcion:"Líder mundial en sistemas de riego por goteo y soluciones de agricultura de precisión. Oficina establecida en Lima.",web:"netafim.pe",contacto:"Formulario: netafim.pe/contactanos/\nAv. 28 de Julio 1044, Dpto. 300, Lima",pais:"Israel / Perú",notas:"Netafim Perú S.A.C. presente localmente. Email format: nombre.apellido@netafim.com.pe"},
+  {n:13,empresa:"Netafim",categoria:"💧 Riego y Gestión Hídrica",descripcion:"Líder mundial en sistemas de riego por goteo y soluciones de agricultura de precisión. Oficina establecida en Lima.",web:"netafim.pe",contacto:"Formulario: netafim.pe/contactanos/\nAv. 28 de Julio 1044, Dpto. 300, Lima",pais:"Israel / Perú",notas:"Netafim Perú S.A.C. presente localmente."},
   {n:14,empresa:"Metzer",categoria:"💧 Riego y Gestión Hídrica",descripcion:"Fabricación de sistemas de riego por goteo y microaspersión para cultivos de berries.",web:"metzer-group.com",contacto:"info@metzer-group.com",pais:"Israel",notas:""},
   {n:15,empresa:"Ritec Agrotechnology",categoria:"💧 Riego y Gestión Hídrica",descripcion:"Tecnologías de riego automatizado y sistemas de fertirriego para agricultura.",web:"",contacto:"Consultar en el stand del evento",pais:"—",notas:""},
-  {n:16,empresa:"Relix Water",categoria:"💧 Riego y Gestión Hídrica",descripcion:"Tecnología para gestión eficiente del agua en agricultura y optimización hídrica.",web:"",contacto:"Consultar en el stand del evento",pais:"—",notas:""},
+  {n:16,empresa:"Relix Water",categoria:"💧 Riego y Gestión Hídrica",descripcion:"Tecnología para gestión eficiente del agua en agricultura.",web:"",contacto:"Consultar en el stand del evento",pais:"—",notas:""},
   {n:17,empresa:"Water Partners",categoria:"💧 Riego y Gestión Hídrica",descripcion:"Soluciones integrales de gestión hídrica agrícola.",web:"",contacto:"Consultar en el stand del evento",pais:"—",notas:""},
-  {n:18,empresa:"Tomra",categoria:"⚙️ Maquinaria, Clasificación y Packing",descripcion:"Referente global en clasificación óptica, selección por calidad y soluciones postcosecha para fruta fresca. Distribuidor Perú: Maestranza Metalmecánica (Ica).",web:"tomra.com",contacto:"Perú: Carlos Yamashiro – Maestranza Metalmecánica\n+51 56 214 338  •  www.maestranza.com.pe",pais:"Noruega / Perú",notas:"Area Sales Manager Perú/Argentina: José Lucas Cámara (TOMRA Food). Contactar vía tomra.com/food/contact"},
+  {n:18,empresa:"Tomra",categoria:"⚙️ Maquinaria, Clasificación y Packing",descripcion:"Referente global en clasificación óptica y soluciones postcosecha para fruta fresca. Distribuidor Perú: Maestranza Metalmecánica (Ica).",web:"tomra.com",contacto:"Perú: Carlos Yamashiro – Maestranza Metalmecánica\n+51 56 214 338",pais:"Noruega / Perú",notas:"Area Sales Manager Perú/Argentina: José Lucas Cámara (TOMRA Food)."},
   {n:19,empresa:"Unittec",categoria:"⚙️ Maquinaria, Clasificación y Packing",descripcion:"Tecnología de clasificación óptica y procesamiento de fruta fresca para líneas de packing.",web:"unittecgroup.com",contacto:"info@unittecgroup.com",pais:"Italia",notas:""},
   {n:20,empresa:"A&B Packing Equipment",categoria:"⚙️ Maquinaria, Clasificación y Packing",descripcion:"Equipos y maquinaria especializada para líneas de empaque de frutas.",web:"abpacking.com",contacto:"info@abpacking.com",pais:"EE.UU.",notas:""},
   {n:21,empresa:"MAF Roda",categoria:"⚙️ Maquinaria, Clasificación y Packing",descripcion:"Maquinaria de selección, calibración y empaque de fruta fresca.",web:"",contacto:"Consultar en el stand del evento",pais:"—",notas:""},
@@ -572,27 +462,27 @@ const BASE_DATA = [
   {n:27,empresa:"Jinbaoli",categoria:"⚙️ Maquinaria, Clasificación y Packing",descripcion:"Maquinaria agrícola y sistemas industriales para poscosecha.",web:"",contacto:"Consultar en el stand del evento",pais:"—",notas:""},
   {n:28,empresa:"AISorting",categoria:"⚙️ Maquinaria, Clasificación y Packing",descripcion:"Clasificación de fruta mediante inteligencia artificial y visión computacional.",web:"",contacto:"Consultar en el stand del evento",pais:"—",notas:""},
   {n:29,empresa:"Lauffer Vision",categoria:"⚙️ Maquinaria, Clasificación y Packing",descripcion:"Sistemas de visión artificial para control de calidad y clasificación agrícola.",web:"",contacto:"Consultar en el stand del evento",pais:"—",notas:""},
-  {n:30,empresa:"AgroFresh",categoria:"❄️ Postcosecha y Conservación",descripcion:"Líder mundial en tecnologías postcosecha. SmartFresh (1-MCP), recubrimientos, soluciones digitales FreshCloud para extender vida útil. Sede local en Lima.",web:"agrofresh.com",contacto:"Contacto Perú: Av. Víctor A. Belaúnde 280, Int. 301, Lima\nagrofresh.com/es/regional-contactos/",pais:"EE.UU. / Perú",notas:"Agrofresh Comercial Peru S.A.C. registrada en Lima. Contactar por web para ejecutivo de cuenta."},
-  {n:31,empresa:"Paclife",categoria:"❄️ Postcosecha y Conservación",descripcion:"Tecnología de atmósfera modificada (MAP) activa para conservación de fruta fresca en tránsito. Extiende vida útil hasta 150 días.",web:"paclife.co",contacto:"Cristian Parra – Sales Manager\nCEO: Mauricio Riquelme\nSantiago, Chile – Los Duraznos 683",pais:"Chile",notas:"Referencia directa: cristian.parra@paclife.cl (gestionar por web)."},
-  {n:32,empresa:"ZGroup Ingeniería en Frío",categoria:"❄️ Postcosecha y Conservación",descripcion:"Diseño, construcción e instalación de cámaras frigoríficas y sistemas de refrigeración para fruta.",web:"",contacto:"Consultar en el stand del evento",pais:"—",notas:""},
-  {n:33,empresa:"Friopacking",categoria:"❄️ Postcosecha y Conservación",descripcion:"Tecnología de frío y soluciones integrales para líneas de packing refrigerado.",web:"",contacto:"Consultar en el stand del evento",pais:"—",notas:""},
-  {n:34,empresa:"BioProteck",categoria:"❄️ Postcosecha y Conservación",descripcion:"Soluciones biológicas y productos postcosecha para control de patógenos en fruta.",web:"",contacto:"Consultar en el stand del evento",pais:"—",notas:""},
+  {n:30,empresa:"AgroFresh",categoria:"❄️ Postcosecha y Conservación",descripcion:"Líder mundial en tecnologías postcosecha. SmartFresh, recubrimientos y soluciones digitales FreshCloud.",web:"agrofresh.com",contacto:"Av. Víctor A. Belaúnde 280, Int. 301, Lima",pais:"EE.UU. / Perú",notas:"Agrofresh Comercial Peru S.A.C. registrada en Lima."},
+  {n:31,empresa:"Paclife",categoria:"❄️ Postcosecha y Conservación",descripcion:"Tecnología de atmósfera modificada (MAP) activa. Extiende vida útil hasta 150 días.",web:"paclife.co",contacto:"Cristian Parra – Sales Manager\nCEO: Mauricio Riquelme",pais:"Chile",notas:"Referencia directa: cristian.parra@paclife.cl"},
+  {n:32,empresa:"ZGroup Ingeniería en Frío",categoria:"❄️ Postcosecha y Conservación",descripcion:"Diseño e instalación de cámaras frigoríficas y sistemas de refrigeración para fruta.",web:"",contacto:"Consultar en el stand del evento",pais:"—",notas:""},
+  {n:33,empresa:"Friopacking",categoria:"❄️ Postcosecha y Conservación",descripcion:"Tecnología de frío para líneas de packing refrigerado.",web:"",contacto:"Consultar en el stand del evento",pais:"—",notas:""},
+  {n:34,empresa:"BioProteck",categoria:"❄️ Postcosecha y Conservación",descripcion:"Soluciones biológicas postcosecha para control de patógenos en fruta.",web:"",contacto:"Consultar en el stand del evento",pais:"—",notas:""},
   {n:35,empresa:"Fiamma",categoria:"❄️ Postcosecha y Conservación",descripcion:"Tecnología y equipos de postcosecha para manejo de fruta fresca.",web:"",contacto:"Consultar en el stand del evento",pais:"—",notas:""},
   {n:36,empresa:"Ponis",categoria:"📦 Packaging y Envases",descripcion:"Sistemas de automatización y tecnología para embalaje agrícola.",web:"ponis.it",contacto:"info@ponis.it",pais:"Italia",notas:""},
   {n:37,empresa:"EcoPacking",categoria:"📦 Packaging y Envases",descripcion:"Packaging sostenible para alimentos frescos. Materiales reciclables y biodegradables.",web:"",contacto:"Consultar en el stand del evento",pais:"—",notas:""},
-  {n:38,empresa:"FreshFresh / San Jorge Packaging",categoria:"📦 Packaging y Envases",descripcion:"Envases con atmósfera modificada para conservación y presentación de frutas frescas.",web:"",contacto:"Consultar en el stand del evento",pais:"—",notas:""},
+  {n:38,empresa:"FreshFresh / San Jorge Packaging",categoria:"📦 Packaging y Envases",descripcion:"Envases con atmósfera modificada para conservación y presentación de frutas.",web:"",contacto:"Consultar en el stand del evento",pais:"—",notas:""},
   {n:39,empresa:"Typack",categoria:"📦 Packaging y Envases",descripcion:"Packaging especializado para alimentos frescos y exportación de fruta.",web:"",contacto:"Consultar en el stand del evento",pais:"—",notas:""},
   {n:40,empresa:"NorCass",categoria:"📦 Packaging y Envases",descripcion:"Fabricación de plásticos y soluciones de embalaje para agricultura.",web:"",contacto:"Consultar en el stand del evento",pais:"—",notas:""},
   {n:41,empresa:"Norplast",categoria:"📦 Packaging y Envases",descripcion:"Fabricación de plásticos agrícolas y materiales de cubierta.",web:"",contacto:"Consultar en el stand del evento",pais:"—",notas:""},
   {n:42,empresa:"Maruplast",categoria:"📦 Packaging y Envases",descripcion:"Tecnologías para invernaderos y agricultura protegida; plásticos agrícolas.",web:"",contacto:"Consultar en el stand del evento",pais:"—",notas:""},
-  {n:43,empresa:"Beeflow",categoria:"🐝 Protección y Biocontrol",descripcion:"Optimización de polinización mediante manejo científico de abejas. Incrementa rendimiento y calidad de arándanos.",web:"beeflow.com",contacto:"info@beeflow.com",pais:"Argentina / Global",notas:""},
+  {n:43,empresa:"Beeflow",categoria:"🐝 Protección y Biocontrol",descripcion:"Optimización de polinización mediante manejo científico de abejas.",web:"beeflow.com",contacto:"info@beeflow.com",pais:"Argentina / Global",notas:""},
   {n:44,empresa:"BeeOtal",categoria:"🐝 Protección y Biocontrol",descripcion:"Servicios de polinización dirigida con abejas para cultivos de berries.",web:"",contacto:"Consultar en el stand del evento",pais:"—",notas:""},
   {n:45,empresa:"Econex",categoria:"🐝 Protección y Biocontrol",descripcion:"Feromonas, trampas y soluciones de monitoreo para control biológico de plagas.",web:"econex.com",contacto:"econex@econex.com",pais:"España",notas:""},
   {n:46,empresa:"Crops Protection",categoria:"🐝 Protección y Biocontrol",descripcion:"Soluciones sostenibles para protección de cultivos de berries.",web:"",contacto:"Consultar en el stand del evento",pais:"—",notas:""},
   {n:47,empresa:"Ecofos",categoria:"🐝 Protección y Biocontrol",descripcion:"Soluciones agrícolas sostenibles para protección y nutrición de cultivos.",web:"",contacto:"Consultar en el stand del evento",pais:"—",notas:""},
   {n:48,empresa:"Ecamed",categoria:"🐝 Protección y Biocontrol",descripcion:"Soluciones ecológicas para manejo integrado de plagas en agricultura.",web:"",contacto:"Consultar en el stand del evento",pais:"—",notas:""},
   {n:49,empresa:"Lucas Biotech",categoria:"🐝 Protección y Biocontrol",descripcion:"Biotecnología aplicada al agro; bioinsumos y soluciones biológicas.",web:"",contacto:"Consultar en el stand del evento",pais:"—",notas:""},
-  {n:50,empresa:"Agronometrics",categoria:"💻 Tecnología e Innovación Agrícola",descripcion:"Plataforma de análisis de mercado de frutas y datos agrícolas en tiempo real para berries.",web:"agronometrics.com",contacto:"info@agronometrics.com",pais:"EE.UU. / Global",notas:""},
+  {n:50,empresa:"Agronometrics",categoria:"💻 Tecnología e Innovación Agrícola",descripcion:"Plataforma de análisis de mercado de frutas y datos agrícolas en tiempo real.",web:"agronometrics.com",contacto:"info@agronometrics.com",pais:"EE.UU. / Global",notas:""},
   {n:51,empresa:"Bitwise Agronomy",categoria:"💻 Tecnología e Innovación Agrícola",descripcion:"Análisis agronómico avanzado y gestión de cultivos basada en datos.",web:"",contacto:"Consultar en el stand del evento",pais:"—",notas:""},
   {n:52,empresa:"Plantlogic",categoria:"💻 Tecnología e Innovación Agrícola",descripcion:"Software y gestión digital agrícola; plataformas de decisión agronómica.",web:"",contacto:"Consultar en el stand del evento",pais:"—",notas:""},
   {n:53,empresa:"Qeneto",categoria:"💻 Tecnología e Innovación Agrícola",descripcion:"Tecnología y análisis de datos para optimización de cultivos agrícolas.",web:"",contacto:"Consultar en el stand del evento",pais:"—",notas:""},
@@ -615,60 +505,70 @@ const BASE_DATA = [
 ];
 
 // ─────────────────────────────────────────────
+// STORAGE HELPERS
+// ─────────────────────────────────────────────
+const LS = {
+  get: k => { try { return JSON.parse(localStorage.getItem(k)) || [] } catch(e) { return [] } },
+  set: (k,v) => { try { localStorage.setItem(k, JSON.stringify(v)) } catch(e) {} }
+};
+
+// ─────────────────────────────────────────────
 // STATE
 // ─────────────────────────────────────────────
 let query = '';
 let activeFilter = 'Todas';
 let allData = [];
+let modalEmpresaId = null;
+let selectedType = '';
+let selectedPrio = 'Media';
+let pendingFilter = 'Todos';
 
-function loadFromStorage() {
-  try {
-    const saved = localStorage.getItem('blueberry_extras');
-    return saved ? JSON.parse(saved) : [];
-  } catch(e) { return []; }
-}
-
-function saveToStorage(extras) {
-  try { localStorage.setItem('blueberry_extras', JSON.stringify(extras)); } catch(e) {}
-}
-
+// ─────────────────────────────────────────────
+// INIT
+// ─────────────────────────────────────────────
 function init() {
-  const extras = loadFromStorage();
+  const extras = LS.get('bc_extras');
   allData = [...BASE_DATA, ...extras];
   buildFilters();
   render();
+  renderCustomCatsList();
+  populateCatSelect();
+  renderPending();
+  updatePendCount();
+  // Set today as default date
+  const today = new Date().toISOString().split('T')[0];
+  document.getElementById('c_fecha').value = today;
 }
 
 // ─────────────────────────────────────────────
-// FILTERS
+// TABS
+// ─────────────────────────────────────────────
+function switchTab(tab) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('page-' + tab).classList.add('active');
+  document.getElementById('tab-' + tab).classList.add('active');
+  if (tab === 'pendientes') renderPending();
+}
+
+// ─────────────────────────────────────────────
+// FILTERS & RENDER
 // ─────────────────────────────────────────────
 function buildFilters() {
-  const cats = ['Todas', ...new Set(allData.map(d => d.categoria))];
+  const customCats = LS.get('bc_cats');
+  const cats = ['Todas', ...new Set(allData.map(d => d.categoria)), ...customCats];
+  const uniqueCats = [...new Set(cats)];
   const container = document.getElementById('filterChips');
   container.innerHTML = '';
-  cats.forEach(cat => {
+  uniqueCats.forEach(cat => {
     const btn = document.createElement('button');
     btn.className = 'chip' + (cat === activeFilter ? ' active' : '');
     btn.textContent = cat;
     btn.onclick = () => { activeFilter = cat; buildFilters(); render(); };
     container.appendChild(btn);
   });
-
-  // Populate select in form too
-  const sel = document.getElementById('f_categoria');
-  const current = sel.value;
-  sel.innerHTML = '<option value="">Seleccionar categoría…</option>';
-  cats.filter(c => c !== 'Todas').forEach(cat => {
-    const opt = document.createElement('option');
-    opt.value = cat; opt.textContent = cat;
-    sel.appendChild(opt);
-  });
-  sel.value = current;
 }
 
-// ─────────────────────────────────────────────
-// SEARCH & RENDER
-// ─────────────────────────────────────────────
 document.getElementById('searchInput').addEventListener('input', function() {
   query = this.value.trim().toLowerCase();
   document.getElementById('clearBtn').classList.toggle('visible', query.length > 0);
@@ -683,76 +583,90 @@ function clearSearch() {
 }
 
 function matches(item) {
-  const q = query;
-  if (!q && activeFilter === 'Todas') return true;
   const catOk = activeFilter === 'Todas' || item.categoria === activeFilter;
-  if (!q) return catOk;
-  const haystack = [item.empresa, item.categoria, item.pais, item.descripcion, item.contacto, item.notas]
-    .join(' ').toLowerCase();
-  return catOk && haystack.includes(q);
+  if (!query) return catOk;
+  const hay = [item.empresa, item.categoria, item.pais, item.descripcion, item.contacto, item.notas].join(' ').toLowerCase();
+  return catOk && hay.includes(query);
 }
 
-function escHtml(str) {
-  return (str || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+function esc(str) {
+  return (str||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
 }
-
 function normalizeUrl(url) {
   if (!url || url === '—') return '';
   url = url.trim();
-  if (url.startsWith('http')) return url;
-  return 'https://' + url;
+  return url.startsWith('http') ? url : 'https://' + url;
 }
 
 function render() {
-  const extras = loadFromStorage();
+  const extras = LS.get('bc_extras');
   allData = [...BASE_DATA, ...extras];
   const filtered = allData.filter(matches);
+  const commitments = LS.get('bc_commits');
   const container = document.getElementById('cardsContainer');
-  const countEl = document.getElementById('countDisplay');
-  const labelEl = document.getElementById('filterLabel');
-
-  countEl.textContent = filtered.length;
-  labelEl.textContent = activeFilter !== 'Todas' ? activeFilter : '';
+  document.getElementById('countDisplay').textContent = filtered.length;
+  document.getElementById('filterLabel').textContent = activeFilter !== 'Todas' ? activeFilter : '';
 
   if (filtered.length === 0) {
-    container.innerHTML = `<div class="empty">
-      <div class="empty-icon">🔍</div>
-      <h3>Sin resultados</h3>
-      <p>Intenta con otro término o categoría</p>
-    </div>`;
+    container.innerHTML = `<div class="empty"><div class="empty-icon">🔍</div><h3>Sin resultados</h3><p>Intenta con otro término o categoría</p></div>`;
     return;
   }
 
-  // Group by category
   const grouped = {};
   filtered.forEach(item => {
     if (!grouped[item.categoria]) grouped[item.categoria] = [];
     grouped[item.categoria].push(item);
   });
 
+  const extraIds = new Set(extras.map(e => e._id));
   let html = '';
-  const isNewId = new Set(extras.map(e => e._id));
 
   Object.entries(grouped).forEach(([cat, items]) => {
-    html += `<div class="section-divider"><span>${escHtml(cat)}</span><div class="divider-line"></div></div>`;
+    html += `<div class="section-divider"><span>${esc(cat)}</span><div class="divider-line"></div></div>`;
     items.forEach((item, idx) => {
-      const isNew = item._id && isNewId.has(item._id);
+      const isNew = item._id && extraIds.has(item._id);
+      const itemId = item._id || 'base_' + item.n;
+      const itemCommits = commitments.filter(c => c.empresaId === itemId && c.status !== 'cancelled');
+      const hasCom = itemCommits.length > 0;
       const webUrl = normalizeUrl(item.web);
-      const delay = Math.min(idx * 40, 300);
+      const delay = Math.min(idx * 35, 280);
+      const isStand = item.contacto && (item.contacto.includes('stand') || item.contacto.includes('evento'));
 
-      html += `<div class="card ${isNew ? 'new-entry' : ''}" style="animation-delay:${delay}ms">
+      const commitsHtml = hasCom ? `<div class="commit-list">` + itemCommits.map(c => `
+        <div class="commit-item-mini">
+          <div class="commit-dot ${c.status==='done'?'dot-done':'dot-pending'}"></div>
+          <div class="commit-mini-text">
+            <div class="commit-mini-type">${esc(c.type)}</div>
+            ${c.notas ? `<div class="commit-mini-note">${esc(c.notas)}</div>` : ''}
+            ${c.fecha ? `<div class="commit-mini-date">📅 ${c.fecha}</div>` : ''}
+          </div>
+          <div class="commit-mini-actions">
+            ${c.status!=='done' ? `<button class="cm-btn" onclick="quickDone('${c.id}')" title="Marcar hecho">✅</button>` : '<span style="font-size:12px;color:var(--accent2)">✓</span>'}
+          </div>
+        </div>`).join('') + `</div>` : '';
+
+      html += `<div class="card ${isNew?'new-entry':''} ${hasCom?'has-commitment':''}" style="animation-delay:${delay}ms">
         <div class="card-header">
-          <div class="card-name">${escHtml(item.empresa)}</div>
-          ${isNew ? '<span class="new-badge">Nuevo</span>' : ''}
+          <div class="card-name">${esc(item.empresa)}</div>
+          <div class="card-badges">
+            ${isNew ? '<span class="badge badge-new">Nuevo</span>' : ''}
+            ${hasCom ? `<span class="badge badge-commit">📋 ${itemCommits.length}</span>` : ''}
+          </div>
         </div>
-        <div class="category-tag">${escHtml(item.categoria)}</div>
-        ${item.descripcion ? `<div class="card-desc">${escHtml(item.descripcion)}</div>` : ''}
+        <div class="category-tag">${esc(item.categoria)}</div>
+        ${item.descripcion ? `<div class="card-desc">${esc(item.descripcion)}</div>` : ''}
         <div class="card-meta">
-          ${item.pais && item.pais !== '—' ? `<div class="meta-row"><span class="meta-icon">📍</span><span class="meta-val">${escHtml(item.pais)}</span></div>` : ''}
-          ${item.contacto && item.contacto !== 'Consultar directamente en el stand del evento' && item.contacto !== 'Consultar en el stand del evento' ? `<div class="meta-row"><span class="meta-icon">📞</span><span class="meta-val">${escHtml(item.contacto)}</span></div>` : (item.contacto ? `<div class="meta-row"><span class="meta-icon">🏪</span><span class="meta-val" style="color:var(--accent3)">${escHtml(item.contacto)}</span></div>` : '')}
+          ${item.pais && item.pais!=='—' ? `<div class="meta-row"><span class="meta-icon">📍</span><span class="meta-val">${esc(item.pais)}</span></div>` : ''}
+          ${item.contacto ? `<div class="meta-row"><span class="meta-icon">${isStand?'🏪':'📞'}</span><span class="meta-val" ${isStand?'style="color:var(--accent3)"':''}>${esc(item.contacto)}</span></div>` : ''}
         </div>
-        ${item.notas ? `<div class="notes-box"><span class="notes-icon">💡</span><div class="notes-text">${escHtml(item.notas)}</div></div>` : ''}
-        ${webUrl ? `<div class="card-footer"><a href="${webUrl}" target="_blank" rel="noopener" class="btn-web">🌐 Abrir sitio</a></div>` : ''}
+        ${item.notas ? `<div class="notes-box"><span style="font-size:13px">💡</span><div class="notes-text">${esc(item.notas)}</div></div>` : ''}
+        ${commitsHtml}
+        <div class="card-footer">
+          ${webUrl ? `<a href="${webUrl}" target="_blank" rel="noopener" class="btn-web">🌐 Abrir sitio</a>` : ''}
+          <button class="btn-commit ${hasCom?'has-c':''}" onclick="openModal('${itemId}','${esc(item.empresa)}')">
+            ${hasCom ? `📋 +Compromiso` : `+ Compromiso`}
+          </button>
+        </div>
       </div>`;
     });
   });
@@ -761,13 +675,261 @@ function render() {
 }
 
 // ─────────────────────────────────────────────
+// COMMITMENT MODAL
+// ─────────────────────────────────────────────
+function openModal(id, nombre) {
+  modalEmpresaId = id;
+  document.getElementById('modalTitle').textContent = 'Registrar compromiso';
+  document.getElementById('modalSub').textContent = '🏢 ' + nombre;
+  document.getElementById('commitModal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+  // Reset
+  selectedType = '';
+  selectedPrio = 'Media';
+  document.querySelectorAll('.type-option').forEach(t => t.classList.remove('selected'));
+  document.querySelectorAll('.prio-btn').forEach(b => b.className = 'prio-btn');
+  document.getElementById('c_contacto').value = '';
+  document.getElementById('c_notas').value = '';
+  const today = new Date().toISOString().split('T')[0];
+  document.getElementById('c_fecha').value = today;
+}
+
+function closeModal() {
+  document.getElementById('commitModal').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function closeModalOutside(e) {
+  if (e.target === document.getElementById('commitModal')) closeModal();
+}
+
+function selectType(el, type) {
+  document.querySelectorAll('.type-option').forEach(t => t.classList.remove('selected'));
+  el.classList.add('selected');
+  selectedType = type;
+}
+
+function selectPrio(btn, prio) {
+  selectedPrio = prio;
+  document.querySelectorAll('.prio-btn').forEach(b => b.className = 'prio-btn');
+  btn.className = 'prio-btn sel-' + prio.toLowerCase();
+}
+
+function saveCommitment() {
+  if (!selectedType) { showToast('⚠️ Selecciona el tipo de compromiso', true); return; }
+  const commits = LS.get('bc_commits');
+  commits.push({
+    id: Date.now().toString(),
+    empresaId: modalEmpresaId,
+    type: selectedType,
+    prioridad: selectedPrio,
+    contacto: document.getElementById('c_contacto').value.trim(),
+    fecha: document.getElementById('c_fecha').value,
+    notas: document.getElementById('c_notas').value.trim(),
+    status: 'pending',
+    createdAt: new Date().toISOString()
+  });
+  LS.set('bc_commits', commits);
+  closeModal();
+  render();
+  renderPending();
+  updatePendCount();
+  showToast('✅ Compromiso guardado');
+}
+
+function quickDone(id) {
+  const commits = LS.get('bc_commits');
+  const c = commits.find(x => x.id === id);
+  if (c) c.status = 'done';
+  LS.set('bc_commits', commits);
+  render();
+  renderPending();
+  updatePendCount();
+  showToast('✅ Marcado como hecho');
+}
+
+// ─────────────────────────────────────────────
+// PENDING PAGE
+// ─────────────────────────────────────────────
+function renderPending() {
+  const commits = LS.get('bc_commits');
+  const total = commits.length;
+  const done = commits.filter(c => c.status === 'done').length;
+  const pend = commits.filter(c => c.status === 'pending').length;
+
+  document.getElementById('statTotal').textContent = total;
+  document.getElementById('statDone').textContent = done;
+  document.getElementById('statPend').textContent = pend;
+
+  // Filter chips
+  const filterBar = document.getElementById('pendingFilterChips');
+  const filters = ['Todos','Pendientes','Completados','🔴 Alta','🟡 Media','🟢 Baja'];
+  filterBar.innerHTML = filters.map(f =>
+    `<button class="chip ${pendingFilter===f?'active':''}" onclick="setPendFilter('${f}')">${f}</button>`
+  ).join('');
+
+  // Filter commits
+  let filtered = commits;
+  if (pendingFilter === 'Pendientes') filtered = commits.filter(c => c.status === 'pending');
+  else if (pendingFilter === 'Completados') filtered = commits.filter(c => c.status === 'done');
+  else if (pendingFilter === '🔴 Alta') filtered = commits.filter(c => c.prioridad === 'Alta');
+  else if (pendingFilter === '🟡 Media') filtered = commits.filter(c => c.prioridad === 'Media');
+  else if (pendingFilter === '🟢 Baja') filtered = commits.filter(c => c.prioridad === 'Baja');
+
+  const list = document.getElementById('pendingList');
+
+  if (filtered.length === 0) {
+    list.innerHTML = `<div class="pending-empty"><div class="ei">${total===0?'📋':'🎉'}</div><h3>${total===0?'Sin compromisos aún':'Sin resultados en este filtro'}</h3><p>${total===0?'Agrega compromisos desde el directorio tocando "+ Compromiso" en cualquier empresa.':'Prueba con otro filtro.'}</p></div>`;
+    return;
+  }
+
+  // Get empresa names
+  const extrasMap = {};
+  [...BASE_DATA, ...LS.get('bc_extras')].forEach(e => {
+    extrasMap[e._id || 'base_'+e.n] = e;
+  });
+
+  // Sort: pending first, then by priority
+  const prioOrder = {Alta:0,Media:1,Baja:2};
+  filtered.sort((a,b) => {
+    if (a.status !== b.status) return a.status === 'pending' ? -1 : 1;
+    return (prioOrder[a.prioridad]||1) - (prioOrder[b.prioridad]||1);
+  });
+
+  list.innerHTML = filtered.map((c, i) => {
+    const emp = extrasMap[c.empresaId];
+    const empName = emp ? emp.empresa : c.empresaId;
+    const empCat = emp ? emp.categoria : '';
+    const isDone = c.status === 'done';
+    const delay = Math.min(i * 40, 300);
+    return `<div class="pcard ${isDone?'status-done':''}" style="animation-delay:${delay}ms">
+      ${isDone ? '<div class="pcard-status-done">✅ Completado</div>' : ''}
+      <div class="pcard-top">
+        <div>
+          <div class="pcard-empresa">${esc(empName)}</div>
+          <div class="pcard-cat">${esc(empCat)}</div>
+        </div>
+        <span class="pcard-prio prio-${(c.prioridad||'Media').toLowerCase()}">${c.prioridad||'Media'}</span>
+      </div>
+      <div class="pcard-type">
+        <span class="pcard-type-icon">${c.type ? c.type.split(' ')[0] : '📋'}</span>
+        <span class="pcard-type-label">${esc(c.type||'')}</span>
+      </div>
+      <div class="pcard-meta">
+        ${c.contacto ? `<div class="pmeta-row"><span>👤</span><span class="pmeta-val">${esc(c.contacto)}</span></div>` : ''}
+        ${c.fecha ? `<div class="pmeta-row"><span>📅</span><span class="pmeta-val" style="color:var(--accent3)">${c.fecha}</span></div>` : ''}
+        ${c.notas ? `<div class="pmeta-row"><span>📝</span><span class="pmeta-val">${esc(c.notas)}</span></div>` : ''}
+      </div>
+      <div class="pcard-actions">
+        ${!isDone
+          ? `<button class="pact-btn pact-done" onclick="markDone('${c.id}')">✅ Marcar hecho</button>`
+          : `<button class="pact-btn pact-undo" onclick="markUndo('${c.id}')">↩️ Deshacer</button>`
+        }
+        <button class="pact-btn pact-delete" onclick="deleteCommit('${c.id}')">🗑 Eliminar</button>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function setPendFilter(f) {
+  pendingFilter = f;
+  renderPending();
+}
+
+function markDone(id) {
+  const commits = LS.get('bc_commits');
+  const c = commits.find(x => x.id === id);
+  if (c) c.status = 'done';
+  LS.set('bc_commits', commits);
+  renderPending();
+  render();
+  updatePendCount();
+  showToast('✅ Marcado como hecho');
+}
+
+function markUndo(id) {
+  const commits = LS.get('bc_commits');
+  const c = commits.find(x => x.id === id);
+  if (c) c.status = 'pending';
+  LS.set('bc_commits', commits);
+  renderPending();
+  render();
+  updatePendCount();
+  showToast('↩️ Marcado como pendiente');
+}
+
+function deleteCommit(id) {
+  if (!confirm('¿Eliminar este compromiso?')) return;
+  const commits = LS.get('bc_commits').filter(c => c.id !== id);
+  LS.set('bc_commits', commits);
+  renderPending();
+  render();
+  updatePendCount();
+  showToast('🗑 Eliminado');
+}
+
+function updatePendCount() {
+  const pend = LS.get('bc_commits').filter(c => c.status === 'pending').length;
+  const badge = document.getElementById('pendCount');
+  badge.textContent = pend;
+  badge.style.display = pend > 0 ? 'inline-block' : 'none';
+}
+
+// ─────────────────────────────────────────────
+// CUSTOM CATEGORIES
+// ─────────────────────────────────────────────
+function addCustomCategory() {
+  const input = document.getElementById('newCatInput');
+  const val = input.value.trim();
+  if (!val) { showToast('⚠️ Escribe un nombre de categoría', true); return; }
+  const cats = LS.get('bc_cats');
+  if (cats.includes(val)) { showToast('⚠️ Esa categoría ya existe', true); return; }
+  cats.push(val);
+  LS.set('bc_cats', cats);
+  input.value = '';
+  renderCustomCatsList();
+  populateCatSelect();
+  buildFilters();
+  showToast('🏷️ Categoría agregada');
+}
+
+function removeCustomCat(cat) {
+  const cats = LS.get('bc_cats').filter(c => c !== cat);
+  LS.set('bc_cats', cats);
+  renderCustomCatsList();
+  populateCatSelect();
+  buildFilters();
+  showToast('🗑 Categoría eliminada');
+}
+
+function renderCustomCatsList() {
+  const cats = LS.get('bc_cats');
+  const el = document.getElementById('customCatsList');
+  el.innerHTML = cats.map(c =>
+    `<div class="custom-cat-chip">${esc(c)}<button onclick="removeCustomCat('${esc(c)}')" title="Eliminar">✕</button></div>`
+  ).join('');
+}
+
+function populateCatSelect() {
+  const baseCats = [...new Set(BASE_DATA.map(d => d.categoria))];
+  const customCats = LS.get('bc_cats');
+  const extraCats = [...new Set(LS.get('bc_extras').map(e => e.categoria).filter(Boolean))];
+  const all = [...new Set([...baseCats, ...customCats, ...extraCats])];
+  const sel = document.getElementById('f_categoria');
+  const cur = sel.value;
+  sel.innerHTML = '<option value="">Seleccionar categoría…</option>' +
+    all.map(c => `<option value="${esc(c)}">${esc(c)}</option>`).join('');
+  sel.value = cur;
+}
+
+// ─────────────────────────────────────────────
 // ADD COMPANY
 // ─────────────────────────────────────────────
 function saveCompany() {
   const empresa = document.getElementById('f_empresa').value.trim();
-  if (!empresa) { showToast('⚠️ Ingresa el nombre de la empresa'); return; }
-
-  const newItem = {
+  if (!empresa) { showToast('⚠️ Ingresa el nombre de la empresa', true); return; }
+  const extras = LS.get('bc_extras');
+  extras.push({
     _id: Date.now().toString(),
     n: allData.length + 1,
     empresa,
@@ -777,23 +939,17 @@ function saveCompany() {
     contacto: document.getElementById('f_contacto').value.trim(),
     pais: document.getElementById('f_pais').value.trim() || '—',
     notas: document.getElementById('f_notas').value.trim()
-  };
-
-  const extras = loadFromStorage();
-  extras.push(newItem);
-  saveToStorage(extras);
-
+  });
+  LS.set('bc_extras', extras);
   allData = [...BASE_DATA, ...extras];
   buildFilters();
   activeFilter = 'Todas';
   query = '';
-  document.getElementById('searchInput').value = '';
-  document.getElementById('clearBtn').classList.remove('visible');
-
   clearForm();
   render();
-  showToast('✅ Empresa guardada exitosamente');
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+  showToast('✅ Empresa guardada');
+  switchTab('directorio');
+  window.scrollTo({top:0,behavior:'smooth'});
 }
 
 function clearForm() {
@@ -803,11 +959,16 @@ function clearForm() {
   document.getElementById('f_categoria').value = '';
 }
 
-function showToast(msg) {
+// ─────────────────────────────────────────────
+// TOAST
+// ─────────────────────────────────────────────
+let toastTimer;
+function showToast(msg, err=false) {
   const t = document.getElementById('toast');
   t.textContent = msg;
-  t.classList.add('show');
-  setTimeout(() => t.classList.remove('show'), 2800);
+  t.className = 'toast' + (err?' err':'') + ' show';
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => t.classList.remove('show'), 2800);
 }
 
 // ─────────────────────────────────────────────
